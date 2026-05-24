@@ -1,15 +1,61 @@
 window.__SHOWS__ = [
   {
-    "title": "雨霖铃",
-    "quality": "4K",
-    "episode": "24",
-    "bdLink": "https://pan.baidu.com/s/1_-gpijea-MaBVXZnQ52Tfw",
+    "id": "mpjv0nazl1lw",
+    "title": "🔝主角 刘浩存",
+    "quality": "HD4K",
+    "episode": "",
+    "bdLink": "https://pan.baidu.com/s/1m1dbr3FINQh73kSOx4XAyw?pwd=8888",
     "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/417db255efd4",
-    "isNew": false,
+    "kkLink": "https://pan.quark.cn/s/f083530afbe3",
+    "isNew": true,
     "updatedDate": "2026/5/24"
   },
   {
+    "id": "mpjv5d7xs96q",
+    "title": "雨霖铃  杨洋 章若楠",
+    "quality": "4k",
+    "episode": "26",
+    "bdLink": "https://pan.baidu.com/s/1_-gpijea-MaBVXZnQ52Tfw",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/b07b9d7c0ff1",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7x1u4g",
+    "title": "🔝良陈美锦",
+    "quality": "HD4K",
+    "episode": "40",
+    "bdLink": "https://pan.baidu.com/s/1Tpq-ajrTouhQsY0gmsxCzg?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/9bcd15f679b7",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7xs5jn",
+    "title": "🔝家业 杨紫",
+    "quality": "HD4K",
+    "episode": "18",
+    "bdLink": "https://pan.baidu.com/s/1uNHnXwNbss2w7jSTgHWmiA",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/468771b6832f",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7xrb5l",
+    "title": "🔝绯色潮汐",
+    "quality": "1080P",
+    "episode": "12",
+    "bdLink": "https://pan.baidu.com/s/1edIBT3-hlse1I-ABdi3o9g",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/1b9f39887912",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7x67a1",
     "title": "香港探秘地图",
     "quality": "HD4K",
     "episode": "05",
@@ -20,23 +66,113 @@ window.__SHOWS__ = [
     "updatedDate": "2026/5/24"
   },
   {
-    "title": "盛唐奇案",
+    "id": "mpjv5d7xdpkz",
+    "title": "🔥嫁金枝",
+    "quality": "1080P",
+    "episode": "15",
+    "bdLink": "https://pan.baidu.com/s/1lngTBtR0Nbyww7M7dLX9_A?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/a928400e7a49",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7xxj65",
+    "title": "🔥盛唐奇案",
     "quality": "1080P",
     "episode": "10",
     "bdLink": "https://pan.baidu.com/s/1_K9d7f_j-R9cJf_aUKdTew",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/bc670b321f99",
     "isNew": false,
-    "updatedDate": "2026/5/23"
+    "updatedDate": "2026/5/24"
   },
   {
-    "title": "嫁金枝",
-    "quality": "1080P",
-    "episode": "15",
-    "bdLink": "https://pan.baidu.com/s/1lngTBtR0Nbyww7M7dLX9_A?pwd=8888",
+    "id": "mpjv5d7yke90",
+    "title": "🔝大唐迷雾 冯绍峰  第一季",
+    "quality": "HD4K",
+    "episode": "06",
+    "bdLink": "https://pan.baidu.com/s/1C2x8U4-nfsESh6IK0ER25Q",
     "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/a928400e7a49",
+    "kkLink": "https://pan.quark.cn/s/5ff4ec64d887",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7y4ghb",
+    "title": "罪无可逃",
+    "quality": "1080P",
+    "episode": "16",
+    "bdLink": "https://pan.baidu.com/s/12RMyq0esC3YXFj5tesCw0A?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/60f1e741782a",
     "isNew": false,
-    "updatedDate": "2026/5/23"
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7y10iz",
+    "title": "🔥放开那个女巫",
+    "quality": "1080P",
+    "episode": "04",
+    "bdLink": "https://pan.baidu.com/s/1WpJJLX1rpf89Lr2A3ZRGtw",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/74546b84a680",
+    "isNew": false,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7ywbrc",
+    "title": "🔥凌探未来",
+    "quality": "1080P",
+    "episode": "02",
+    "bdLink": "https://pan.baidu.com/s/1_OZ9Zf0UynmUGofCMWmEbw?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/45fd587073f2",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7ybwlq",
+    "title": "🔥隐欲囚笼",
+    "quality": "1080P",
+    "episode": "05",
+    "bdLink": "https://pan.baidu.com/s/12um4xwLyk9h8AmIxJvWOxA?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/4cd865ac4002",
+    "isNew": false,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7y8ny5",
+    "title": "颜不由心",
+    "quality": "1080P",
+    "episode": "20",
+    "bdLink": "https://pan.baidu.com/s/1xV72mVgXqZjaP5zhFc0lfQ?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/31068a5d3263",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7yjvoz",
+    "title": "🔥赌金",
+    "quality": "1080P",
+    "episode": "08",
+    "bdLink": "https://pan.baidu.com/s/1k88Tkf6AxRwZB7uGZdxJrw?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/3347293101cf",
+    "isNew": true,
+    "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjv5d7y0o75",
+    "title": "你的心事映在我的眉间",
+    "quality": "1080P",
+    "episode": "07",
+    "bdLink": "https://pan.baidu.com/s/1x_P6IKIZJ-NjQj5ZT8_5BA?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/dfa32c51eba9",
+    "isNew": false,
+    "updatedDate": "2026/5/24"
   }
 ];
