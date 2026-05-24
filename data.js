@@ -182,5 +182,18 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/dfa32c51eba9",
     "isNew": false,
     "updatedDate": "2026/5/24"
+  },
+  {
+    "id": "mpjxsz5aln28",
+    "title": "低智商犯罪",
+    "quality": "4k",
+    "episode": "24",
+    "bdLink": "https://pan.baidu.com/s/16q7MEBBFofDIxMpXnn9pUA?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/f52cbd6dab0e",
+    "isNew": false,
+    "updatedDate": "2026/5/24",
+    "isPinned": false,
+    "isCompleted": true
   }
 ];
