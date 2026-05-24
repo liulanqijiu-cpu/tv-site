@@ -88,56 +88,66 @@ window.__SHOWS__ = [
     "id": "mpjv5d7y10iz",
     "title": "🔥放开那个女巫",
     "quality": "1080P",
-    "episode": "04",
+    "episode": "06",
     "bdLink": "https://pan.baidu.com/s/1WpJJLX1rpf89Lr2A3ZRGtw",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/74546b84a680",
-    "isNew": false,
-    "updatedDate": "2026/5/24"
+    "isNew": true,
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7xdpkz",
     "title": "🔥嫁金枝",
     "quality": "1080P",
-    "episode": "15",
+    "episode": "16",
     "bdLink": "https://pan.baidu.com/s/1lngTBtR0Nbyww7M7dLX9_A?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/a928400e7a49",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7ywbrc",
     "title": "🔥凌探未来",
     "quality": "1080P",
-    "episode": "02",
+    "episode": "03",
     "bdLink": "https://pan.baidu.com/s/1_OZ9Zf0UynmUGofCMWmEbw?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/45fd587073f2",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7xxj65",
     "title": "🔥盛唐奇案",
     "quality": "1080P",
-    "episode": "10",
+    "episode": "12",
     "bdLink": "https://pan.baidu.com/s/1_K9d7f_j-R9cJf_aUKdTew",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/bc670b321f99",
-    "isNew": false,
-    "updatedDate": "2026/5/24"
+    "isNew": true,
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7ybwlq",
     "title": "🔥隐欲囚笼",
     "quality": "1080P",
-    "episode": "05",
+    "episode": "08",
     "bdLink": "https://pan.baidu.com/s/12um4xwLyk9h8AmIxJvWOxA?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/4cd865ac4002",
     "isNew": false,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": true
   },
   {
     "id": "mpjv5d7x67a1",
@@ -167,12 +177,14 @@ window.__SHOWS__ = [
     "id": "mpjv5d7y4ghb",
     "title": "罪无可逃",
     "quality": "1080P",
-    "episode": "16",
+    "episode": "24",
     "bdLink": "https://pan.baidu.com/s/12RMyq0esC3YXFj5tesCw0A?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/60f1e741782a",
     "isNew": false,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": true
   },
   {
     "id": "mpjyjz5d0m3c",
