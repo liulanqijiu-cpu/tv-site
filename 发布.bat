@@ -1,42 +1,25 @@
 @echo off
-chcp 65001 >nul
+set GIT="C:\Program Files\Git\bin\git.exe"
 cd /d "%~dp0"
 
 echo.
 echo ========================================
-echo   发布网站到 GitHub Pages
+echo   Publish to GitHub Pages
 echo ========================================
 echo.
 
-echo [1/3] 添加文件...
-git add data.js
-if %errorlevel% neq 0 (
-  echo 错误：git add 失败！
-  pause
-  exit /b 1
-)
+echo [1/3] Adding files...
+%GIT% add data.js
 
-echo [2/3] 提交...
-git commit -m "更新剧集 %date%"
-if %errorlevel% neq 0 (
-  echo 提交失败或没有变更，尝试继续推送...
-)
+echo [2/3] Committing...
+%GIT% commit -m "update %date%"
 
-echo [3/3] 推送到 GitHub...
-git push
-if %errorlevel% neq 0 (
-  echo.
-  echo ========================================
-  echo   推送失败！请检查网络后重试
-  echo ========================================
-  echo.
-  pause
-  exit /b 1
-)
+echo [3/3] Pushing...
+%GIT% push
 
 echo.
 echo ========================================
-echo   完成！1-2分钟后刷新网站即可看到更新
+echo   Done! Site will update in 1-2 minutes
 echo   https://liulanqijiu-cpu.github.io/tv-site/
 echo ========================================
 echo.
