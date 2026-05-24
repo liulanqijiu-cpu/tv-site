@@ -107,6 +107,14 @@
   }
   .badge-new { background: #ffe0e5; color: #e84a6b; }
   .badge-today { background: #fff0e0; color: #e8843c; }
+  .badge-pinned { background: #fff7e6; color: #fa8c16; }
+  .badge-completed { background: #e6ffe6; color: #52c41a; }
+
+  .section-header {
+    font-size: 14px; font-weight: 600; color: #555;
+    padding: 8px 0 6px; margin-top: 4px;
+  }
+  .section-header:first-child { margin-top: 0; }
 
   .show-card .links { display: flex; flex-direction: column; gap: 4px; }
   .show-card .link-row {
@@ -195,7 +203,7 @@
   </div>
 
   <!-- Shows -->
-  <div class="section-title">
+  <div class="section-title" id="sectionTitle">
     <span class="dot"></span> 全部剧集 <span class="count" id="showCount"></span>
   </div>
   <div id="showList"></div>
@@ -213,73 +221,102 @@
   const TODAY = new Date().toLocaleDateString('zh-CN');
   let shows = window.__SHOWS__ || [];
 
-  // sort: today's updates first, then by title
   function sortShows(list) {
     return [...list].sort((a, b) => {
+      // pinned first
+      if (a.isPinned && !b.isPinned) return -1;
+      if (!a.isPinned && b.isPinned) return 1;
+      // today's updates after pinned
       const aToday = a.updatedDate === TODAY ? 1 : 0;
       const bToday = b.updatedDate === TODAY ? 1 : 0;
       if (aToday !== bToday) return bToday - aToday;
+      // ongoing before completed
+      if (a.isCompleted && !b.isCompleted) return 1;
+      if (!a.isCompleted && b.isCompleted) return -1;
       return a.title.localeCompare(b.title, 'zh');
     });
   }
 
   function render(filter = '') {
     const q = filter.trim().toLowerCase();
-    let filtered = q ? shows.filter(s => s.title.toLowerCase().includes(q)) : shows;
+    let filtered = q ? shows.filter(s => s.title.toLowerCase().includes(q)) : [...shows];
     filtered = sortShows(filtered);
 
     const listEl = document.getElementById('showList');
-    const searchInput = document.getElementById('searchInput');
-    const clearBtn = document.getElementById('clearBtn');
-
     document.getElementById('totalCount').textContent = shows.length;
     document.getElementById('todayCount').textContent = shows.filter(s => s.updatedDate === TODAY).length;
-    document.getElementById('showCount').textContent = q ? `— 搜索"${esc(q)}"找到 ${filtered.length} 部` : `${shows.length} 部`;
+
+    const countLabel = q ? `搜索"${esc(q)}"找到 ${filtered.length} 部` : `${shows.length} 部`;
+    document.getElementById('showCount').textContent = countLabel;
 
     if (filtered.length === 0) {
+      document.getElementById('sectionTitle').style.display = 'none';
       listEl.innerHTML = q
         ? '<div class="no-results">未找到包含「' + esc(q) + '」的剧集</div>'
         : '<div class="empty"><div class="icon">📭</div>暂无剧集</div>';
-    } else {
-      listEl.innerHTML = filtered.map(s => {
-        const isToday = s.updatedDate === TODAY;
-        const badges = [];
-        if (s.isNew) badges.push('<span class="badge badge-new">新</span>');
-        if (isToday) badges.push('<span class="badge badge-today">今日更新</span>');
-
-        const epText = s.episode ? '更 ' + s.episode : '';
-
-        let linksHTML = '';
-        if (s.bdLink) {
-          linksHTML += `
-            <a class="link-row" href="${escAttr(s.bdLink)}" target="_blank" rel="noopener">
-              <span class="platform bd">百度</span>
-              <span class="link-url">${esc(s.bdLink)}</span>
-              ${s.bdCode ? '<span style="font-size:11px;color:#888;flex-shrink:0">码:' + esc(s.bdCode) + '</span>' : ''}
-              <button class="copy-link-btn" onclick="event.preventDefault();event.stopPropagation();copySingle('${escAttr(s.bdLink)}')">复制</button>
-            </a>`;
-        }
-        if (s.kkLink) {
-          linksHTML += `
-            <a class="link-row" href="${escAttr(s.kkLink)}" target="_blank" rel="noopener">
-              <span class="platform kk">夸克</span>
-              <span class="link-url">${esc(s.kkLink)}</span>
-              <button class="copy-link-btn" onclick="event.preventDefault();event.stopPropagation();copySingle('${escAttr(s.kkLink)}')">复制</button>
-            </a>`;
-        }
-
-        const updatedClass = isToday ? ' updated' : '';
-
-        return `<div class="show-card${updatedClass}">
-          <div class="top-row">
-            <span class="title">${esc(s.title)}</span>
-            <span class="meta">${esc(s.quality)}${epText ? ' ' + epText : ''}</span>
-            ${badges.join('')}
-          </div>
-          <div class="links">${linksHTML}</div>
-        </div>`;
-      }).join('');
+      return;
     }
+
+    document.getElementById('sectionTitle').style.display = 'flex';
+
+    // group into sections
+    const pinned = filtered.filter(s => s.isPinned);
+    const todayNotPinned = filtered.filter(s => !s.isPinned && s.updatedDate === TODAY);
+    const ongoing = filtered.filter(s => !s.isPinned && s.updatedDate !== TODAY && !s.isCompleted);
+    const completed = filtered.filter(s => !s.isPinned && s.isCompleted);
+
+    const sections = [];
+    if (pinned.length) sections.push({ title: '📌 置顶推荐', shows: pinned });
+    if (todayNotPinned.length) sections.push({ title: '🔥 今日更新', shows: todayNotPinned });
+    if (ongoing.length) sections.push({ title: '📺 连载中', shows: ongoing });
+    if (completed.length) sections.push({ title: '✅ 完结专区', shows: completed });
+
+    listEl.innerHTML = sections.map(sec => {
+      const cards = sec.shows.map(s => buildCard(s)).join('');
+      return `<div class="section-header">${sec.title} <span style="font-weight:400;font-size:12px;color:#999">${sec.shows.length} 部</span></div>${cards}`;
+    }).join('');
+  }
+
+  function buildCard(s) {
+    const isToday = s.updatedDate === TODAY;
+    const badges = [];
+    if (s.isPinned) badges.push('<span class="badge badge-pinned">置顶</span>');
+    if (s.isCompleted) badges.push('<span class="badge badge-completed">完结</span>');
+    if (s.isNew) badges.push('<span class="badge badge-new">新</span>');
+    if (isToday) badges.push('<span class="badge badge-today">今日更新</span>');
+
+    const epText = s.episode ? '更 ' + s.episode : '';
+
+    let linksHTML = '';
+    if (s.bdLink) {
+      linksHTML += `
+        <a class="link-row" href="${escAttr(s.bdLink)}" target="_blank" rel="noopener">
+          <span class="platform bd">百度</span>
+          <span class="link-url">${esc(s.bdLink)}</span>
+          ${s.bdCode ? '<span style="font-size:11px;color:#888;flex-shrink:0">码:' + esc(s.bdCode) + '</span>' : ''}
+          <button class="copy-link-btn" onclick="event.preventDefault();event.stopPropagation();copySingle('${escAttr(s.bdLink)}')">复制</button>
+        </a>`;
+    }
+    if (s.kkLink) {
+      linksHTML += `
+        <a class="link-row" href="${escAttr(s.kkLink)}" target="_blank" rel="noopener">
+          <span class="platform kk">夸克</span>
+          <span class="link-url">${esc(s.kkLink)}</span>
+          <button class="copy-link-btn" onclick="event.preventDefault();event.stopPropagation();copySingle('${escAttr(s.kkLink)}')">复制</button>
+        </a>`;
+    }
+
+    const updatedClass = isToday ? ' updated' : '';
+
+    return `<div class="show-card${updatedClass}">
+      <div class="top-row">
+        <span class="title">${esc(s.title)}</span>
+        <span class="meta">${esc(s.quality)}${epText ? ' ' + epText : ''}</span>
+        ${badges.join('')}
+      </div>
+      <div class="links">${linksHTML}</div>
+    </div>`;
+  }
 
     if (q) {
       clearBtn.classList.add('show');
