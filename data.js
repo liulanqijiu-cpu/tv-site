@@ -186,7 +186,7 @@ window.__SHOWS__ = [
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjyam1y6s4z",
+    "id": "mpjyjz5cbyjh",
     "title": "🔝剑来2&剑来 第二季",
     "quality": "HD4K",
     "episode": "27",
@@ -195,11 +195,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/6cc1c7a203dd",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo830ygm",
+    "id": "mpjyjz5cu8r3",
     "title": "🔥飞驰人生3 第三部（",
     "quality": "1080P",
     "episode": "",
@@ -208,11 +208,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/510009e294ce",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo830vsv",
+    "id": "mpjyjz5d0m3c",
     "title": "🔝八千里路云和月",
     "quality": "1080P",
     "episode": "40",
@@ -221,11 +221,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/0d68c6107d14",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83ofnv",
+    "id": "mpjyjz5da2yc",
     "title": "🔝你是迟来的欢喜",
     "quality": "1080P",
     "episode": "30",
@@ -234,11 +234,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/e4252dbc1b50",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo839o11",
+    "id": "mpjyjz5dzcly",
     "title": "🔝家事法庭",
     "quality": "HD4K",
     "episode": "26",
@@ -247,11 +247,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/31f40f64384b",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83dmfz",
+    "id": "mpjyjz5dk2if",
     "title": "🔝正义女神",
     "quality": "1080P",
     "episode": "25",
@@ -260,11 +260,11 @@ window.__SHOWS__ = [
     "kkLink": "",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83m4sa",
+    "id": "mpjyjz5dog8q",
     "title": "🔝隐身的名字",
     "quality": "HD4k",
     "episode": "31",
@@ -273,11 +273,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/32f20edb162d",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83mgwn",
+    "id": "mpjyjz5du0s6",
     "title": "🔝你好1983",
     "quality": "HD4K",
     "episode": "36",
@@ -286,11 +286,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/30f857ae3c0f",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83aqqk",
+    "id": "mpjyjz5d6mup",
     "title": "🔝玫瑰丛生",
     "quality": "1080P",
     "episode": "26",
@@ -299,11 +299,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/2553409bfd60",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83lzvo",
+    "id": "mpjyjz5dnxqg",
     "title": "岁月有情时",
     "quality": "HD4K",
     "episode": "30",
@@ -312,11 +312,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/92892801aabd",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83y8xh",
+    "id": "mpjyjz5dxtew",
     "title": "🔝乡村爱情18",
     "quality": "1080P",
     "episode": "40",
@@ -325,11 +325,11 @@ window.__SHOWS__ = [
     "kkLink": "",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo831xoh",
+    "id": "mpjyjz5dm3pu",
     "title": "🔝唐宫奇案之青雾风鸣",
     "quality": "1080P",
     "episode": "34",
@@ -338,11 +338,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/d9bdf5238434",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83wwit",
+    "id": "mpjyjz5dog20",
     "title": "🔝生命树",
     "quality": "HD4K",
     "episode": "40",
@@ -351,11 +351,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/aceaf31cb56c",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83obwp",
+    "id": "mpjyjz5d37hc",
     "title": "🔝成何体统",
     "quality": "1080P",
     "episode": "32",
@@ -364,11 +364,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/8359a4e4c38d",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83x1gn",
+    "id": "mpjyjz5d7pzj",
     "title": "🔝太平年",
     "quality": "HD4K",
     "episode": "48",
@@ -377,11 +377,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/34846dacdfb0",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo83e98o",
+    "id": "mpjyjz5d2chr",
     "title": "繁华落尽",
     "quality": "1080P",
     "episode": "34",
@@ -390,11 +390,11 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/133b0ceba797",
     "isNew": false,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjydo842sa6",
+    "id": "mpjyjz5d0t20",
     "title": "🔝有罪之身",
     "quality": "1080P",
     "episode": "14",
@@ -403,7 +403,7 @@ window.__SHOWS__ = [
     "kkLink": "https://pan.quark.cn/s/63b7a1d8ae0c",
     "isNew": true,
     "isPinned": false,
-    "isCompleted": false,
+    "isCompleted": true,
     "updatedDate": "2026/5/24"
   }
 ];
