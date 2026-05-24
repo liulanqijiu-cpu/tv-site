@@ -223,16 +223,16 @@
 
   function sortShows(list) {
     return [...list].sort((a, b) => {
-      // pinned first
+      // completed always at bottom
+      if (a.isCompleted && !b.isCompleted) return 1;
+      if (!a.isCompleted && b.isCompleted) return -1;
+      // pinned (non-completed) at top
       if (a.isPinned && !b.isPinned) return -1;
       if (!a.isPinned && b.isPinned) return 1;
-      // today's updates after pinned
+      // today's updates next
       const aToday = a.updatedDate === TODAY ? 1 : 0;
       const bToday = b.updatedDate === TODAY ? 1 : 0;
       if (aToday !== bToday) return bToday - aToday;
-      // ongoing before completed
-      if (a.isCompleted && !b.isCompleted) return 1;
-      if (!a.isCompleted && b.isCompleted) return -1;
       return a.title.localeCompare(b.title, 'zh');
     });
   }
@@ -259,11 +259,11 @@
 
     document.getElementById('sectionTitle').style.display = 'flex';
 
-    // group into sections
-    const pinned = filtered.filter(s => s.isPinned);
-    const todayNotPinned = filtered.filter(s => !s.isPinned && s.updatedDate === TODAY);
-    const ongoing = filtered.filter(s => !s.isPinned && s.updatedDate !== TODAY && !s.isCompleted);
-    const completed = filtered.filter(s => !s.isPinned && s.isCompleted);
+    // group into sections: completed takes priority over pinned
+    const completed = filtered.filter(s => s.isCompleted);
+    const pinned = filtered.filter(s => s.isPinned && !s.isCompleted);
+    const todayNotPinned = filtered.filter(s => !s.isPinned && !s.isCompleted && s.updatedDate === TODAY);
+    const ongoing = filtered.filter(s => !s.isPinned && !s.isCompleted && s.updatedDate !== TODAY);
 
     const sections = [];
     if (pinned.length) sections.push({ title: '📌 置顶推荐', shows: pinned });
