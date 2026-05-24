@@ -1,18 +1,5 @@
 window.__SHOWS__ = [
   {
-    "id": "mpjv0nazl1lw",
-    "title": "🔝主角 刘浩存",
-    "quality": "HD4K",
-    "episode": "",
-    "bdLink": "https://pan.baidu.com/s/1m1dbr3FINQh73kSOx4XAyw?pwd=8888",
-    "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/f083530afbe3",
-    "isNew": true,
-    "updatedDate": "2026/5/24",
-    "isPinned": true,
-    "isCompleted": false
-  },
-  {
     "id": "mpjv5d7xs96q",
     "title": "雨霖铃  杨洋 章若楠",
     "quality": "4k",
@@ -173,17 +160,6 @@ window.__SHOWS__ = [
     "updatedDate": "2026/5/24"
   },
   {
-    "id": "mpjv5d7y0o75",
-    "title": "你的心事映在我的眉间",
-    "quality": "1080P",
-    "episode": "07",
-    "bdLink": "https://pan.baidu.com/s/1x_P6IKIZJ-NjQj5ZT8_5BA?pwd=8888",
-    "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/dfa32c51eba9",
-    "isNew": false,
-    "updatedDate": "2026/5/24"
-  },
-  {
     "id": "mpjxsz5aln28",
     "title": "低智商犯罪",
     "quality": "4k",
@@ -195,5 +171,18 @@ window.__SHOWS__ = [
     "updatedDate": "2026/5/24",
     "isPinned": false,
     "isCompleted": true
+  },
+  {
+    "id": "mpjy58agcvib",
+    "title": "主角 刘浩存",
+    "quality": "HD4K",
+    "episode": "31",
+    "bdLink": "https://pan.baidu.com/s/1m1dbr3FINQh73kSOx4XAyw?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/f083530afbe3",
+    "isNew": true,
+    "isPinned": true,
+    "isCompleted": false,
+    "updatedDate": "2026/5/24"
   }
 ];
