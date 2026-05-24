@@ -159,7 +159,9 @@ window.__SHOWS__ = [
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/31068a5d3263",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/25",
+    "isPinned": false,
+    "isCompleted": true
   },
   {
     "id": "mpjv5d7y4ghb",
