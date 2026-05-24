@@ -172,17 +172,37 @@
     text-align: center; padding: 30px; color: #bbb; font-size: 14px;
   }
 
+  /* Notice */
+  .notice {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border: 1px solid #ffc107;
+    border-radius: var(--radius); padding: 12px 14px; margin-bottom: 12px;
+    font-size: 12px; line-height: 1.8; color: #8b6914;
+  }
+  .notice .title { font-weight: 700; font-size: 13px; color: #d4a017; margin-bottom: 4px; }
+  .notice .warn { color: #d94a4a; font-weight: 600; }
+  .notice .highlight { background: #ffe0e0; padding: 1px 6px; border-radius: 4px; color: #d94a4a; }
+
   /* Responsive */
   @media (max-width: 480px) {
     .container { padding: 10px; }
     .show-card { padding: 12px; }
     .show-card .title { font-size: 15px; }
+    .notice { font-size: 11px; padding: 10px; }
   }
 </style>
 </head>
 <body>
 
 <div class="container">
+  <!-- Notice -->
+  <div class="notice">
+    <div class="title">🔍 搜索方法：直接输入剧名，如页面空白点右上角三个点刷新</div>
+    <div>🆘 <span class="warn">注意：先转存 → 再观看 → 避失效 → 耽误看 → 文件大 → 补档慢</span></div>
+    <div>🙋 <span class="highlight">夸克和谐严重，尽量使用百度</span></div>
+    <div>🔥 <span class="highlight">夸克缺集数就是和谐了</span></div>
+  </div>
+
   <!-- Header -->
   <div class="header">
     <div class="icon">🎬</div>
