@@ -8,7 +8,9 @@ window.__SHOWS__ = [
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/f083530afbe3",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/24",
+    "isPinned": true,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7xs96q",
@@ -19,7 +21,9 @@ window.__SHOWS__ = [
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/b07b9d7c0ff1",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/24",
+    "isPinned": true,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7x1u4g",
@@ -30,7 +34,9 @@ window.__SHOWS__ = [
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/9bcd15f679b7",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/24",
+    "isPinned": true,
+    "isCompleted": true
   },
   {
     "id": "mpjv5d7xs5jn",
@@ -41,7 +47,9 @@ window.__SHOWS__ = [
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/468771b6832f",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/24",
+    "isPinned": true,
+    "isCompleted": false
   },
   {
     "id": "mpjv5d7xrb5l",
