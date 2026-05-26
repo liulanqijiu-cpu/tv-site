@@ -1,2 +1,6 @@
 node_modules/
 browser-data/
+baidu_cookies.json
+baidu_transfer.py
+baidupcs-go/
+quark/
