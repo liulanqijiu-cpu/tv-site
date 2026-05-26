@@ -1,0 +1,5 @@
+↓ 一行一个剧，格式: 剧名 | 画质 | 集数 | 百度链接 | 提取码 | 夸克链接
+↓ 没有的就空着，比如没夸克链接就留空: 剧名 | HD4K | 10 | https://pan.baidu.com/s/xxx | 8888 |
+↓ 把下面的示例删掉，粘贴你的:
+
+主角 刘浩存 | HD4K | 33 | https://pan.baidu.com/s/1m1dbr3FINQh73kSOx4XAyw | 8888 | https://pan.quark.cn/s/f083530afbe3

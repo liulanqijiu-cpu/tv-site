@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>链接格式化</title>
+<style>
+  :root { --accent: #e84a6b; --bg: #fafafa; --card: #fff; --border: #e0e0e0; --text: #333; --muted: #888; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 20px; }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 20px; text-align: center; margin-bottom: 4px; }
+  .sub { text-align: center; color: var(--muted); font-size: 12px; margin-bottom: 16px; }
+
+  .card { background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+  textarea { width: 100%; min-height: 200px; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 13px; font-family: inherit; resize: vertical; line-height: 1.8; }
+  textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(232,74,107,0.1); }
+
+  .hint { font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+  button {
+    padding: 10px 20px; border: none; border-radius: 20px; font-size: 14px; cursor: pointer; font-weight: 500;
+    transition: all .15s;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #d43a5b; }
+  .btn-outline { background: #fff; border: 1px solid var(--border); color: var(--text); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { padding: 6px 14px; font-size: 12px; }
+
+  .output { background: #f5f5f5; border-radius: 8px; padding: 12px; font-size: 12px; font-family: Consolas, "Courier New", monospace; white-space: pre-wrap; max-height: 500px; overflow: auto; }
+  .output:empty::after { content: '等待生成...'; color: #ccc; }
+
+  .count { font-size: 13px; color: var(--accent); font-weight: 600; }
+  .toast { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 99; }
+  .toast.show { opacity: 1; }
+
+  .links-section { margin-top: 8px; }
+  .link-item { display: flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 12px; }
+  .link-item a { color: #4a90d9; text-decoration: none; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tag { font-size: 10px; padding: 1px 6px; border-radius: 8px; font-weight: 600; flex-shrink: 0; }
+  .tag-bd { background: #dceeff; color: #4a90d9; }
+  .tag-kk { background: #ffe0e0; color: #d94a4a; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>📺 链接格式化</h1>
+  <div class="sub">粘贴文本 → 自动识别 → 一键复制 JSON</div>
+
+  <div class="card">
+    <textarea id="input" placeholder="随便粘贴，格式不限，举例：
+
+主角 刘浩存 HD4K 更33
+百度: https://pan.baidu.com/s/xxx 提取码: 8888
+夸克: https://pan.quark.cn/s/xxx
+
+家业 杨紫 4K 更22
+https://pan.baidu.com/s/xxx
+https://pan.quark.cn/s/xxx
+
+香港探秘地图 更06
+夸克: https://pan.quark.cn/s/xxx"></textarea>
+    <div class="hint">支持多种格式：带"百度/夸克"标签的链接自动识别，剧名+集数自动提取</div>
+    <div class="btn-row">
+      <button class="btn-primary" onclick="parseAll()">🔍 解析生成</button>
+      <button class="btn-outline" onclick="copyOutput()">📋 一键复制</button>
+      <button class="btn-outline btn-sm" onclick="document.getElementById('input').value=''; document.getElementById('output').textContent=''; document.getElementById('linksBox').innerHTML=''">清空</button>
+    </div>
+  </div>
+
+  <div class="card" id="linksBox" style="display:none">
+    <div style="font-weight:600;margin-bottom:8px;">🔗 点击打开原链接（手动保存后，复制新链接粘贴回输入框重新解析）</div>
+    <div class="links-section" id="linksList"></div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <span style="font-weight:600">📋 输出 <span class="count" id="countLabel"></span></span>
+      <button class="btn-outline btn-sm" onclick="openAllTabs()">在新标签中打开所有链接</button>
+    </div>
+    <div class="output" id="output"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const today = new Date().toLocaleDateString('zh-CN').replace(/\//g, '/');
+
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 1500);
+}
+
+function genId(i) { return 'mp' + Date.now().toString(36) + '_' + i; }
+
+function parseAll() {
+  const raw = document.getElementById('input').value.trim();
+  if (!raw) { toast('请先粘贴内容'); return; }
+
+  // Split into blocks by double newlines or separator lines
+  const blocks = raw.split(/\n\n+/).filter(b => b.trim());
+  const shows = [];
+
+  for (const block of blocks) {
+    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    if (lines.length === 0) continue;
+
+    // Extract title from first line
+    let firstLine = lines[0];
+    // Remove common prefixes
+    firstLine = firstLine.replace(/^[🔥🔝📌★⭐]\s*/, '');
+
+    // Parse title, quality, episode from first line
+    let title = firstLine;
+    let quality = 'HD4K';
+    let episode = '';
+
+    // Try to extract quality
+    const qMatch = title.match(/(HD4K|4K|1080P|720P|4k|1080p|720p)/i);
+    if (qMatch) {
+      quality = qMatch[1].toUpperCase().replace('4K', '4K').replace('HD4K', 'HD4K');
+      title = title.replace(qMatch[0], '').trim();
+    }
+
+    // Try to extract episode: 更XX or 第X集 or just 集数
+    const epMatch = title.match(/(?:更|第)\s*(\d+)\s*(?:集)?/);
+    if (epMatch) {
+      episode = epMatch[1];
+      title = title.replace(epMatch[0], '').trim();
+    }
+
+    // If title still has special chars at start, clean up
+    title = title.replace(/^\s*[-–—|·•]\s*/, '').trim();
+
+    // Find links in all lines
+    let bdLink = '', bdCode = '8888', kkLink = '';
+
+    for (const line of lines) {
+      // Baidu link
+      const bdMatch = line.match(/(https?:\/\/pan\.baidu\.com\/s\/[^\s]+)/i);
+      if (bdMatch) {
+        bdLink = bdMatch[1];
+        // Try to extract password
+        const pwdMatch = line.match(/(?:提取码|密码|pwd)[：:]\s*(\w+)/i);
+        if (pwdMatch) bdCode = pwdMatch[1];
+      }
+
+      // Quark link
+      const kkMatch = line.match(/(https?:\/\/pan\.quark\.cn\/s\/[^\s]+)/i);
+      if (kkMatch) kkLink = kkMatch[1];
+    }
+
+    if (title) {
+      shows.push({
+        title,
+        quality,
+        episode,
+        bdLink,
+        bdCode,
+        kkLink,
+      });
+    }
+  }
+
+  if (shows.length === 0) { toast('未识别到任何剧集，请检查格式'); return; }
+
+  // Output
+  document.getElementById('countLabel').textContent = `(${shows.length} 部)`;
+  const outputEl = document.getElementById('output');
+  outputEl.textContent = shows.map((s, i) => JSON.stringify({
+    id: genId(i),
+    title: s.title,
+    quality: s.quality,
+    episode: s.episode,
+    bdLink: s.bdLink,
+    bdCode: s.bdCode,
+    kkLink: s.kkLink,
+    isNew: true,
+    isPinned: false,
+    isCompleted: false,
+    updatedDate: today,
+  }, null, 2)).join(',\n') + ',';
+
+  // Links panel
+  const linksList = document.getElementById('linksList');
+  let linksHTML = '';
+  shows.forEach((s, i) => {
+    linksHTML += `<div style="font-weight:600;margin-top:8px;">${i + 1}. ${s.title} ${s.episode ? '更'+s.episode : ''}</div>`;
+    if (s.bdLink) linksHTML += `<div class="link-item"><span class="tag tag-bd">百度</span><a href="${s.bdLink}" target="_blank">${s.bdLink}</a><span style="font-size:10px;color:#888">码:${s.bdCode}</span></div>`;
+    if (s.kkLink) linksHTML += `<div class="link-item"><span class="tag tag-kk">夸克</span><a href="${s.kkLink}" target="_blank">${s.kkLink}</a></div>`;
+  });
+  linksList.innerHTML = linksHTML || '无链接';
+  document.getElementById('linksBox').style.display = linksHTML ? 'block' : 'none';
+
+  toast(`识别到 ${shows.length} 个剧集`);
+}
+
+function copyOutput() {
+  const text = document.getElementById('output').textContent;
+  if (!text.trim()) { toast('没有内容可复制'); return; }
+  navigator.clipboard.writeText(text).then(() => toast('已复制到剪贴板')).catch(() => toast('复制失败'));
+}
+
+function openAllTabs() {
+  const links = document.querySelectorAll('#linksList a');
+  links.forEach(a => window.open(a.href, '_blank'));
+  toast(`打开了 ${links.length} 个链接`);
+}
+</script>
+
+</body>
+</html>
