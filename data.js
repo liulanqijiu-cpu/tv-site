@@ -16,14 +16,14 @@ window.__SHOWS__ = [
     "id": "mpjy58agcvib",
     "title": "主角 刘浩存",
     "quality": "HD4K",
-    "episode": "32",
+    "episode": "33",
     "bdLink": "https://pan.baidu.com/s/1m1dbr3FINQh73kSOx4XAyw?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/f083530afbe3",
     "isNew": true,
     "isPinned": true,
     "isCompleted": false,
-    "updatedDate": "2026/5/25"
+    "updatedDate": "2026/5/26"
   },
   {
     "id": "mpjv5d7x1u4g",
@@ -77,12 +77,14 @@ window.__SHOWS__ = [
     "id": "mpjv5d7x67a1",
     "title": "香港探秘地图",
     "quality": "HD4K",
-    "episode": "05",
+    "episode": "06",
     "bdLink": "https://pan.baidu.com/s/1GwnRCD-5lsMtFMNnGPa7gA",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/532b5e8c9d9b",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "updatedDate": "2026/5/26",
+    "isPinned": false,
+    "isCompleted": false
   },
   {
     "id": "mpjyjz5d0m3c",
@@ -764,14 +766,14 @@ window.__SHOWS__ = [
     "id": "mpl6g560qkgi",
     "title": "雨霖铃  杨洋 章若楠",
     "quality": "4k",
-    "episode": "27",
+    "episode": "29",
     "bdLink": "https://pan.baidu.com/s/1_-gpijea-MaBVXZnQ52Tfw",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/b07b9d7c0ff1",
     "isNew": true,
     "isPinned": true,
     "isCompleted": false,
-    "updatedDate": "2026/5/25"
+    "updatedDate": "2026/5/26"
   },
   {
     "id": "mpl6kdwzepn3",
@@ -811,5 +813,31 @@ window.__SHOWS__ = [
     "isPinned": false,
     "isCompleted": false,
     "updatedDate": "2026/5/25"
+  },
+  {
+    "id": "mpmpwnib0g91",
+    "title": "家业 杨紫",
+    "quality": "HD4K",
+    "episode": "22",
+    "bdLink": "https://pan.baidu.com/s/1uNHnXwNbss2w7jSTgHWmiA",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/468771b6832f",
+    "isNew": true,
+    "isPinned": true,
+    "isCompleted": false,
+    "updatedDate": "2026/5/26"
+  },
+  {
+    "id": "mpmq1chz5ldv",
+    "title": "大唐迷雾 冯绍峰  第一季",
+    "quality": "HD4K",
+    "episode": "10",
+    "bdLink": "https://pan.baidu.com/s/1C2x8U4-nfsESh6IK0ER25Q",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/5ff4ec64d887",
+    "isNew": true,
+    "isPinned": true,
+    "isCompleted": false,
+    "updatedDate": "2026/5/26"
   }
 ];
