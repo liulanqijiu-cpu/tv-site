@@ -10,6 +10,15 @@ echo ========================================
 echo.
 
 echo [1/3] Checking for changes...
+
+REM First check if there are unpushed commits
+%GIT% log origin/master..HEAD --oneline 2>nul | findstr "." >nul
+if %errorlevel%==0 (
+    echo   Found unpushed commits, pushing directly...
+    goto push
+)
+
+REM Then check for working tree changes
 %GIT% diff --quiet data.js index.html
 if %errorlevel%==0 (
     echo   No changes detected in data.js or index.html
@@ -33,6 +42,7 @@ if %errorlevel% neq 0 (
     goto end
 )
 
+:push
 echo [4/4] Pushing...
 %GIT% push
 if %errorlevel% neq 0 (
