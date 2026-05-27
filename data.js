@@ -42,12 +42,12 @@ window.__SHOWS__ = [
     "id": "mpjv5d7yke90",
     "title": "🔝大唐迷雾 冯绍峰 第一季",
     "quality": "HD4K",
-    "episode": "08",
+    "episode": "13",
     "bdLink": "https://pan.baidu.com/s/1C2x8U4-nfsESh6IK0ER25Q",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/5ff4ec64d887",
     "isNew": true,
-    "updatedDate": "2026/5/25",
+    "updatedDate": "2026/5/27",
     "isPinned": true,
     "isCompleted": false
   },
@@ -66,12 +66,13 @@ window.__SHOWS__ = [
     "id": "mpjv5d7yjvoz",
     "title": "🔥赌金",
     "quality": "1080P",
-    "episode": "08",
+    "episode": "10",
     "bdLink": "https://pan.baidu.com/s/1k88Tkf6AxRwZB7uGZdxJrw?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/3347293101cf",
     "isNew": true,
-    "updatedDate": "2026/5/24"
+    "isCompleted": true,
+    "updatedDate": "2026/5/27"
   },
   {
     "id": "mpjv5d7x67a1",
@@ -813,44 +814,5 @@ window.__SHOWS__ = [
     "isPinned": false,
     "isCompleted": false,
     "updatedDate": "2026/5/25"
-  },
-  {
-    "id": "mpmpwnib0g91",
-    "title": "家业 杨紫",
-    "quality": "HD4K",
-    "episode": "22",
-    "bdLink": "https://pan.baidu.com/s/1uNHnXwNbss2w7jSTgHWmiA",
-    "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/468771b6832f",
-    "isNew": true,
-    "isPinned": true,
-    "isCompleted": false,
-    "updatedDate": "2026/5/26"
-  },
-  {
-    "id": "mpmq1chz5ldv",
-    "title": "大唐迷雾 冯绍峰  第一季",
-    "quality": "HD4K",
-    "episode": "13",
-    "bdLink": "https://pan.baidu.com/s/1C2x8U4-nfsESh6IK0ER25Q",
-    "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/5ff4ec64d887",
-    "isNew": true,
-    "isPinned": false,
-    "isCompleted": false,
-    "updatedDate": "2026/5/27"
-  },
-  {
-    "id": "mpo48qfl708q",
-    "title": "赌金",
-    "quality": "1080P",
-    "episode": "10",
-    "bdLink": "https://pan.baidu.com/s/1k88Tkf6AxRwZB7uGZdxJrw?pwd=8888",
-    "bdCode": "8888",
-    "kkLink": "https://pan.quark.cn/s/3347293101cf",
-    "isNew": true,
-    "isPinned": false,
-    "isCompleted": true,
-    "updatedDate": "2026/5/27"
   }
 ];
