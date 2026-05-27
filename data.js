@@ -3,12 +3,12 @@ window.__SHOWS__ = [
     "id": "mpjv5d7xs5jn",
     "title": "🔝家业 杨紫",
     "quality": "HD4K",
-    "episode": "22",
+    "episode": "24",
     "bdLink": "https://pan.baidu.com/s/1uNHnXwNbss2w7jSTgHWmiA",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/468771b6832f",
     "isNew": true,
-    "updatedDate": "2026/5/26",
+    "updatedDate": "2026/5/27",
     "isPinned": true,
     "isCompleted": false
   },
@@ -16,14 +16,14 @@ window.__SHOWS__ = [
     "id": "mpjy58agcvib",
     "title": "主角 刘浩存",
     "quality": "HD4K",
-    "episode": "33",
+    "episode": "",
     "bdLink": "https://pan.baidu.com/s/1m1dbr3FINQh73kSOx4XAyw?pwd=8888",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/f083530afbe3",
     "isNew": true,
     "isPinned": true,
     "isCompleted": false,
-    "updatedDate": "2026/5/26"
+    "updatedDate": "2026/5/27"
   },
   {
     "id": "mpjv5d7x1u4g",
@@ -42,12 +42,12 @@ window.__SHOWS__ = [
     "id": "mpjv5d7yke90",
     "title": "🔝大唐迷雾 冯绍峰 第一季",
     "quality": "HD4K",
-    "episode": "10",
+    "episode": "08",
     "bdLink": "https://pan.baidu.com/s/1C2x8U4-nfsESh6IK0ER25Q",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/5ff4ec64d887",
     "isNew": true,
-    "updatedDate": "2026/5/26",
+    "updatedDate": "2026/5/25",
     "isPinned": true,
     "isCompleted": false
   },
@@ -766,14 +766,14 @@ window.__SHOWS__ = [
     "id": "mpl6g560qkgi",
     "title": "雨霖铃  杨洋 章若楠",
     "quality": "4k",
-    "episode": "29",
+    "episode": "30",
     "bdLink": "https://pan.baidu.com/s/1_-gpijea-MaBVXZnQ52Tfw",
     "bdCode": "8888",
     "kkLink": "https://pan.quark.cn/s/b07b9d7c0ff1",
     "isNew": true,
     "isPinned": true,
     "isCompleted": false,
-    "updatedDate": "2026/5/26"
+    "updatedDate": "2026/5/27"
   },
   {
     "id": "mpl6kdwzepn3",
@@ -813,5 +813,44 @@ window.__SHOWS__ = [
     "isPinned": false,
     "isCompleted": false,
     "updatedDate": "2026/5/25"
+  },
+  {
+    "id": "mpmpwnib0g91",
+    "title": "家业 杨紫",
+    "quality": "HD4K",
+    "episode": "22",
+    "bdLink": "https://pan.baidu.com/s/1uNHnXwNbss2w7jSTgHWmiA",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/468771b6832f",
+    "isNew": true,
+    "isPinned": true,
+    "isCompleted": false,
+    "updatedDate": "2026/5/26"
+  },
+  {
+    "id": "mpmq1chz5ldv",
+    "title": "大唐迷雾 冯绍峰  第一季",
+    "quality": "HD4K",
+    "episode": "13",
+    "bdLink": "https://pan.baidu.com/s/1C2x8U4-nfsESh6IK0ER25Q",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/5ff4ec64d887",
+    "isNew": true,
+    "isPinned": false,
+    "isCompleted": false,
+    "updatedDate": "2026/5/27"
+  },
+  {
+    "id": "mpo48qfl708q",
+    "title": "赌金",
+    "quality": "1080P",
+    "episode": "10",
+    "bdLink": "https://pan.baidu.com/s/1k88Tkf6AxRwZB7uGZdxJrw?pwd=8888",
+    "bdCode": "8888",
+    "kkLink": "https://pan.quark.cn/s/3347293101cf",
+    "isNew": true,
+    "isPinned": false,
+    "isCompleted": true,
+    "updatedDate": "2026/5/27"
   }
 ];
